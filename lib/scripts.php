@@ -38,8 +38,10 @@ function roots_scripts() {
 
   wp_register_script('ratchetjs', get_template_directory_uri() . '/assets/js/ratchet.js', false, null, false);
   wp_register_script('roots_main', get_template_directory_uri() . '/assets/js/main.js', false, null, false);
+   wp_register_script('fingerblast', get_template_directory_uri() . '/assets/js/fingerblast.js', false, null, false);
   wp_enqueue_script('ratchetjs');
   wp_enqueue_script('roots_main');
+  wp_enqueue_script('fingerblast');
 }
 
 add_action('wp_enqueue_scripts', 'roots_scripts', 100);
