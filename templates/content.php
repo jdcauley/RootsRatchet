@@ -1,3 +1,17 @@
+
+<div class="slider" id="mySlider">
+  <ul>
+
+ <?php query_posts('cat=3&showposts=5'); ?>
+  <?php while (have_posts()) : the_post(); ?>
+    <li>
+      <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
+      <span class="slide-text"><?php the_title(); ?></span>
+    </li>
+    <?php endwhile;?>
+  </ul>
+</div>
+<div class="content-padded">
 <?php if (!have_posts()) : ?>
   <div class="alert alert-block fade in">
     <a class="close" data-dismiss="alert">&times;</a>
@@ -18,6 +32,7 @@
     <footer>
       <?php the_tags('<ul class="entry-tags"><li>','</li><li>','</li></ul>'); ?>
     </footer>
+    <hr>
   </article>
 <?php endwhile; ?>
 
@@ -37,3 +52,4 @@
     </ul>
   </nav>
 <?php endif; ?>
+</div>
