@@ -5,7 +5,7 @@
 
   <?php get_template_part('templates/header-top-navbar'); ?>
   <div class="content">
-
+    <div class="content-padded">
       <div id="main" class="<?php echo roots_main_class(); ?>" role="main">
         <?php include roots_template_path(); ?>
       </div>
@@ -17,6 +17,6 @@
   </div><!-- /#content -->
 
   <?php get_template_part('templates/footer'); ?>
-
+</div>
 </body>
 </html>
